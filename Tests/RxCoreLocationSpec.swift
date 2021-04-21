@@ -142,7 +142,9 @@ class RxCoreLocationSpec: QuickSpec {
         }
         
         itBehavesLike(HasEventsBehavior<Bool>.self) {
-            HasEventsBehaviorContext(scheduler, sut.rx.showsBackgroundLocationIndicator)
+            if #available(iOS 11.0, *) {
+                HasEventsBehaviorContext(scheduler, sut.rx.showsBackgroundLocationIndicator)
+            }
         }
         
         itBehavesLike(HasEventsBehavior<CLLocation?>.self) {
