@@ -11,7 +11,7 @@ import PackageDescription
 
 let package = Package(
     name: "RxCoreLocation",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v11)],
     products: [
         .library(name: "RxCoreLocation", targets: ["RxCoreLocation"])
     ],
